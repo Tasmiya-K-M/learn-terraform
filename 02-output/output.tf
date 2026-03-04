@@ -11,7 +11,9 @@ output "name" {
 }
 
 
-# to aviod yes or no while running terraform apply use - terraform apply -auto-approve
+# to aviod yes or no while running terraform apply use ---> terraform apply -auto-approve
+# terraform init, terraform plan  ---> no creation of state file
+# terraform apply ---> will create state file
 
 
   
