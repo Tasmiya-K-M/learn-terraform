@@ -24,9 +24,9 @@ data "aws_ami" "example" {
   most_recent      = true
   name_regex       = "Centos-8-DevOps-Practice"
   owners           = ["140297480520"]
-  region           = "us-east-1"
+#   region           = "us-east-1a"
 }
 
 output "aws_ami_output" {
-  value = data.aws_ami.example.image_id
+  value = data.aws_ami.example.id
 }
