@@ -16,6 +16,6 @@ output "sample1" {
 
 # the value of variables + string  --> use ${variable}
 
-output "sample_variable_value" {
-  value = "te value of sample - ${var.sample}"
+output "sample1_variable_value" {
+  value = "the value of sample1 - ${var.sample1}"
 }
