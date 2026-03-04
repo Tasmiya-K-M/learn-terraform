@@ -80,3 +80,10 @@ output "env-output" {
   value = var.env
 }
 
+# if you want variables to be automatically picked up use tf.vars file as "terraform.tfvars"
+
+variable "url" {}
+
+output "url-output" {
+  value = var.url
+}
