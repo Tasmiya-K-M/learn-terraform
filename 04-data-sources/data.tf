@@ -23,8 +23,7 @@ output "id-output" {
 data "aws_ami" "example" {
   most_recent      = true
   name_regex       = "Centos-8-DevOps-Practice"
-  owners           = ["amazon"]
-  region           = "us-east-1a"
+  owners           = ["140297480520"]
 }
 
 output "aws_ami_output" {
