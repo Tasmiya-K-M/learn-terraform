@@ -13,3 +13,9 @@ output "sample" {
 output "sample1" {
   value = var.sample1
 }
+
+# the value of variables + string  --> use ${variable}
+
+output "sample_variable_value" {
+  value = "te value of sample - ${var.sample}"
+}
