@@ -8,5 +8,8 @@ variable "sample1" {
 
 output "sample" {
   value = var.sample
+}
+
+output "sample1" {
   value = var.sample1
 }
