@@ -67,3 +67,13 @@ output "courses" {
 output "course_details" {
   value = var.course_details["Devops"]
 }
+
+
+# instead of doing hardcoding value in variable block use tfvars
+variable "env" {
+  
+}
+
+output "env-output" {
+  value = var.env
+}
