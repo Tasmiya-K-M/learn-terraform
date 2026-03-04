@@ -70,6 +70,8 @@ output "course_details" {
 
 
 # instead of doing hardcoding value in variable block use tfvars
+# terraform plan -var-file=dev.tfvars (pass this file name when running plan and apply command)
+
 variable "env" {
   
 }
@@ -77,3 +79,4 @@ variable "env" {
 output "env-output" {
   value = var.env
 }
+
