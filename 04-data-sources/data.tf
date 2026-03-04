@@ -23,8 +23,10 @@ output "id-output" {
 data "aws_ami" "example" {
   owners           = ["140297480520"]
   most_recent      = true
-  name_regex       = "Centos-8-DevOps-Practice"
-  
+  filter {
+    name   = "name"
+    values = ["Centos-8-DevOps-Practice*"]
+  }
 }
 
 provider "aws" {
