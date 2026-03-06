@@ -13,3 +13,4 @@ data "aws_ami" "example" {
   name_regex = "Centos-8-DevOps-Practice"
 
 }
+
