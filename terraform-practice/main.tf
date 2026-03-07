@@ -11,3 +11,8 @@ resource "aws_instance" "myec2" {
 provider "azurerm" {
 
 }
+
+resource "aws_instance" "myec2" {
+  ami = "ami-123"
+  instance_type = "t3.micro"
+}
