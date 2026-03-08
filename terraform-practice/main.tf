@@ -17,4 +17,8 @@ resource "aws_instance" "myec2-1" {
   instance_type = "t3.micro"
 }
 
-provider "alicloud" {}
+terraform {
+  required_providers {
+    source = "aliyun/alicloud/latest"
+  }
+}
