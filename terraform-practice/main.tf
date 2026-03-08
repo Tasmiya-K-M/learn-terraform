@@ -19,6 +19,6 @@ resource "aws_instance" "myec2-1" {
 
 terraform {
   required_providers {
-    source = "aliyun/alicloud/latest"
+    source = "aliyun/alicloud"
   }
 }
