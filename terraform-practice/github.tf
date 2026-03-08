@@ -6,7 +6,6 @@ terraform {
   }
 }
 
-# Configure the GitHub Provider
 provider "github" {}
 
 resource "github_repository" "example" {
