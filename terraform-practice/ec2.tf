@@ -28,3 +28,16 @@ resource "aws_vpc_security_group_egress_rule" "allow_all_traffic_ipv4" {
   cidr_ipv4         = "0.0.0.0/0"
   ip_protocol       = "-1" 
 }
+
+
+resource "aws_eip" "my-eip" {
+  domain = "vpc"
+  tags = {
+    Name = "demo-eip"
+  }
+}
+
+resource "aws_eip_association" "association" {
+  instance_id = aws_instance.myec2.id
+  allocation_id = aws_eip.my-eip
+}
