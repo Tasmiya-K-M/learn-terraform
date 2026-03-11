@@ -17,7 +17,7 @@ resource "aws_security_group" "demo-security" {
 
 resource "aws_vpc_security_group_ingress_rule" "allow_tls_ipv4" {
   security_group_id = aws_security_group.demo-security.id
-  cidr_ipv4         = "aws_eip.my-eip.public_ip"
+  cidr_ipv4         = "${aws_eip.my-eip.public_ip}/32"
   from_port         = 80
   ip_protocol       = "tcp"
   to_port           = 80
