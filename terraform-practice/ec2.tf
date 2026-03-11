@@ -17,7 +17,7 @@ resource "aws_security_group" "demo-security" {
 
 resource "aws_vpc_security_group_ingress_rule" "allow_tls_ipv4" {
   security_group_id = aws_security_group.demo-security.id
-  cidr_ipv4         = "0.0.0.0/0"
+  cidr_ipv4         = aws_eip.my-eip.public_ip
   from_port         = 80
   ip_protocol       = "tcp"
   to_port           = 80
@@ -37,7 +37,3 @@ resource "aws_eip" "my-eip" {
   }
 }
 
-resource "aws_eip_association" "association" {
-  instance_id = aws_instance.myec2.id
-  allocation_id = aws_eip.my-eip.id
-}
