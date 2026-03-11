@@ -39,5 +39,5 @@ resource "aws_eip" "my-eip" {
 
 resource "aws_eip_association" "association" {
   instance_id = aws_instance.myec2.id
-  allocation_id = aws_eip.my-eip
+  allocation_id = aws_eip.my-eip.id
 }
