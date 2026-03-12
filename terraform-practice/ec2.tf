@@ -39,6 +39,5 @@ resource "aws_security_group" "demo-security" {
 
 
 output "sg-id" {
-  value = aws_security_group.demo-security.id
-  sensitive = true
+  value = aws_security_group.demo-security
 }
