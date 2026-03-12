@@ -1,3 +1,7 @@
-variable "name1" {
-  default = "demo-security"
+variable "dev-sg" {
+  default = "dev-security"
+}
+
+variable "stg-sg" {
+  default = "stg-security"
 }

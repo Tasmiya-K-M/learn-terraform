@@ -10,8 +10,13 @@ provider "aws" {
   
 # }
 
-resource "aws_security_group" "demo-security" {
-  name = var.name1
+resource "aws_security_group" "security1" {
+  name = var.dev-sg
+  description = "terraform through"
+}
+
+resource "aws_security_group" "security2" {
+  name = var.stg-sg
   description = "terraform through"
 }
 
