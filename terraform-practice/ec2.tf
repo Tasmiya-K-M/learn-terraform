@@ -41,3 +41,7 @@ resource "aws_security_group" "demo-security" {
 output "sg-id" {
   value = aws_security_group.demo-security
 }
+
+output "sg-id-2" {
+  value = "this is sg-id ${aws_security_group.demo-security.id}"
+}
