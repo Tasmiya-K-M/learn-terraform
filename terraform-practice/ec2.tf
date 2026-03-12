@@ -11,7 +11,7 @@ provider "aws" {
 # }
 
 resource "aws_security_group" "demo-security" {
-  name = "demo-security"
+  name = var.name1
   description = "terraform through"
 }
 
